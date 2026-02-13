@@ -5,7 +5,7 @@ const apiKey = process.env.WEATHER_KEY;
 
 const app = express();
 app.use(cors({
-    origin: 'https://chh02.github.io/FullStack-countries/',
+    origin: 'https://chh02.github.io',
     optionsSuccessStatus: 200 
   }));
 
