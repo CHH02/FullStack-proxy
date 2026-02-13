@@ -12,7 +12,6 @@ app.get('/api/weather', async (req, res) => {
     const response = await axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${req.query.q}&units=metric&appid=${apiKey}`);
     res.json(response.data);
   } catch (error) {
-    console.log('here is query', req.query.q);
     res.status(500).json({ error: 'Failed to fetch data' });
   }
 });
