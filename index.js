@@ -4,7 +4,10 @@ const axios = require('axios');
 const apiKey = process.env.WEATHER_KEY;
 
 const app = express();
-app.use(cors());
+app.use(cors({
+    origin: 'https://chh02.github.io/FullStack-countries/',
+    optionsSuccessStatus: 200 
+  }));
 
 app.get('/api/weather', async (req, res) => {
   try {
